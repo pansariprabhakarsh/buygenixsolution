@@ -95,11 +95,11 @@
 /* RIGHT — FORM */
 .form-card {
   background: white; border-radius: 22px;
-  padding: 44px; box-shadow: var(--shadow-mid);
+  padding: 36px 40px 40px; box-shadow: var(--shadow-mid);
   border: 1px solid var(--border-soft);
 }
-.form-card h2 { font-size: 28px; color: var(--blue-deep); margin-bottom: 6px; }
-.form-card > p { font-size: 14px; color: var(--text-mid); margin-bottom: 30px; line-height: 1.7; }
+.form-card h2 { font-size: 26px; color: var(--blue-deep); margin-bottom: 6px; line-height: 1.2; }
+.form-card > p { font-size: 13.5px; color: var(--text-mid); margin-bottom: 24px; line-height: 1.7; }
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-group { margin-bottom: 18px; }
@@ -122,29 +122,32 @@
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--blue-sky);
-  box-shadow: 0 0 0 3px rgba(212,160,23,0.12);
+  border-color: var(--teal-light);
+  box-shadow: 0 0 0 3px rgba(28,196,176,0.15);
 }
 .form-group textarea { resize: vertical; min-height: 120px; }
 .form-group select { background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A6A8A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
 
 .privacy-note {
-  background: var(--sky-pale); border: 1px solid rgba(255,255,255,0.8);
+  background: linear-gradient(135deg, #CCFBF1, #FDE68A);
+  border: 1px solid rgba(10,95,85,0.2);
   border-radius: 10px; padding: 13px 16px;
-  margin-bottom: 18px; font-size: 12px; color: #7A5A00;
+  margin-bottom: 18px; font-size: 12px; color: #134E48;
   line-height: 1.6;
 }
-.privacy-note a { color: var(--blue-sky); text-decoration: underline; }
+.privacy-note a { color: var(--teal-bright); text-decoration: underline; }
 
 .submit-btn {
-  width: 100%; background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
+  width: 100%;
+  background: linear-gradient(135deg, #0A5F55, #0E7C6F, #F59E0B);
+  background-size: 200% 100%; background-position: 0% 0;
   color: white; padding: 16px; border: none;
   border-radius: 12px; font-weight: 700; font-size: 15px;
   cursor: pointer; font-family: 'Space Grotesk', sans-serif;
-  transition: all 0.25s; display: flex; align-items: center;
+  transition: all 0.35s; display: flex; align-items: center;
   justify-content: center; gap: 8px;
 }
-.submit-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-mid); }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(10,95,85,0.38); background-position: 100% 0; }
 .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
 
 .success-box {
@@ -175,11 +178,11 @@
 .step-item { text-align: center; padding: 10px; }
 .step-circle {
   width: 52px; height: 52px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue-sky), var(--gold-bright));
+  background: linear-gradient(135deg, #0A5F55, #1CC4B0);
   color: white; display: flex; align-items: center; justify-content: center;
   font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700;
   margin: 0 auto 14px;
-  box-shadow: 0 4px 16px rgba(212,160,23,0.25);
+  box-shadow: 0 4px 16px rgba(10,95,85,0.3);
 }
 .step-item h4 { font-size: 15px; color: var(--blue-deep); margin-bottom: 6px; }
 .step-item p { font-size: 12.5px; color: var(--text-mid); line-height: 1.7; }
@@ -223,7 +226,7 @@
 
 <div class="page-hero" style="position:relative;z-index:10;">
   <div class="hero-badge reveal">📬 Get In Touch</div>
-  <h1 class="reveal">We're Here to<br><span class="accent" style="background:linear-gradient(135deg,#1565C0,#7B1FA2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;;background:linear-gradient(135deg,#1565C0,#1976D2,#7B1FA2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Help You Grow</span></h1>
+  <h1 class="reveal">We're Here to<br><span class="accent" style="background:linear-gradient(135deg,#0A5F55,#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;;background:linear-gradient(135deg,#0A5F55,#0E7C6F,#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Help You Grow</span></h1>
   <p class="reveal">Have questions about our services, membership plans, or partnership opportunities? Our team responds within 24 working hours. For fastest response, reach us on WhatsApp.</p>
 </div>
 
@@ -234,8 +237,8 @@
     <!-- LEFT: INFO -->
     <div class="reveal-left">
       <div class="section-label" style="margin-bottom:12px;">Contact Channels</div>
-      <h2 style="font-size:24px;color:#1565C0;margin-bottom:6px;">Reach Us Directly</h2>
-      <p style="font-size:13.5px;color:#4A6080;margin-bottom:20px;">We're available across multiple channels. Choose what works best for you.</p>
+      <h2 style="font-size:24px;color:#0A5F55;margin-bottom:6px;">Reach Us Directly</h2>
+      <p style="font-size:13.5px;color:#3D6B65;margin-bottom:20px;">We're available across multiple channels. Choose what works best for you.</p>
 
       <a href="mailto:Buygenixsolutions@gmail.com" class="contact-card-item">
         <div class="ci-icon gold">📧</div>
@@ -370,7 +373,7 @@
   <!-- WHAT HAPPENS NEXT -->
   <div class="next-steps reveal">
     <div class="section-label">What to Expect</div>
-    <h2 style="font-size:26px;color:#1565C0;margin-top:10px;">What Happens After You Contact Us</h2>
+    <h2 style="font-size:26px;color:#0A5F55;margin-top:10px;">What Happens After You Contact Us</h2>
     <div class="steps-row">
       <div class="step-item">
         <div class="step-circle">1</div>
@@ -398,19 +401,19 @@
   <!-- FAQ STRIP -->
   <div class="reveal">
     <div class="section-label" style="margin-bottom:12px;">Common Questions</div>
-    <h2 style="font-size:26px;color:#1565C0;margin-bottom:24px;">Before You Contact Us</h2>
+    <h2 style="font-size:26px;color:#0A5F55;margin-bottom:24px;">Before You Contact Us</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-      <div style="background:white;border:1px solid rgba(21,101,192,0.12);border-radius:14px;padding:22px;">
-        <h4 style="font-size:15px;color:#1565C0;margin-bottom:8px;">Can I see a demo first?</h4>
-        <p style="font-size:13px;color:#4A6080;line-height:1.7;">Yes. We can show you sample leads for your product category and walk through the platform before you commit.</p>
+      <div style="background:white;border:1px solid rgba(10,95,85,0.12);border-radius:14px;padding:22px;">
+        <h4 style="font-size:15px;color:#0A5F55;margin-bottom:8px;">Can I see a demo first?</h4>
+        <p style="font-size:13px;color:#3D6B65;line-height:1.7;">Yes. We can show you sample leads for your product category and walk through the platform before you commit.</p>
       </div>
-      <div style="background:white;border:1px solid rgba(21,101,192,0.12);border-radius:14px;padding:22px;">
-        <h4 style="font-size:15px;color:#1565C0;margin-bottom:8px;">How quickly can I start?</h4>
-        <p style="font-size:13px;color:#4A6080;line-height:1.7;">Membership activates within 24 hours of confirmed payment. Lead access begins immediately upon activation.</p>
+      <div style="background:white;border:1px solid rgba(10,95,85,0.12);border-radius:14px;padding:22px;">
+        <h4 style="font-size:15px;color:#0A5F55;margin-bottom:8px;">How quickly can I start?</h4>
+        <p style="font-size:13px;color:#3D6B65;line-height:1.7;">Membership activates within 24 hours of confirmed payment. Lead access begins immediately upon activation.</p>
       </div>
-      <div style="background:white;border:1px solid rgba(21,101,192,0.12);border-radius:14px;padding:22px;">
-        <h4 style="font-size:15px;color:#1565C0;margin-bottom:8px;">Is my data secure?</h4>
-        <p style="font-size:13px;color:#4A6080;line-height:1.7;">Yes. We do not share your personal information with any third party except as described in our Privacy Policy.</p>
+      <div style="background:white;border:1px solid rgba(10,95,85,0.12);border-radius:14px;padding:22px;">
+        <h4 style="font-size:15px;color:#0A5F55;margin-bottom:8px;">Is my data secure?</h4>
+        <p style="font-size:13px;color:#3D6B65;line-height:1.7;">Yes. We do not share your personal information with any third party except as described in our Privacy Policy.</p>
       </div>
     </div>
   </div>

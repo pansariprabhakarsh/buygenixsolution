@@ -41,17 +41,17 @@
 }
 .plan-main:hover { box-shadow: var(--shadow-mid); transform: translateY(-6px); }
 .plan-main.popular {
-  border-color: var(--blue-sky);
-  box-shadow: 0 0 0 2px var(--blue-sky), var(--shadow-brand);
+  border-color: var(--teal-light);
+  box-shadow: 0 0 0 2px var(--teal-light), var(--shadow-brand);
 }
 .plan-main.enterprise {
-  background: linear-gradient(160deg, var(--blue-deep) 0%, var(--blue-mid) 100%);
-  border-color: rgba(212,160,23,0.4);
+  background: linear-gradient(160deg, #0A5F55 0%, #0E7C6F 60%, #1a4a20 100%);
+  border-color: rgba(245,158,11,0.4);
 }
 .popular-tag {
   position: absolute; top: -14px; left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--blue-sky), var(--gold-bright));
+  background: linear-gradient(135deg, #0A5F55, #1CC4B0);
   color: white; padding: 5px 20px; border-radius: 100px;
   font-size: 10.5px; font-weight: 700; white-space: nowrap;
   font-family: 'Space Grotesk', sans-serif;
@@ -60,7 +60,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 12px; font-weight: 700;
   text-transform: uppercase; letter-spacing: 2px;
-  color: var(--blue-sky); margin-bottom: 4px;
+  color: var(--teal-bright); margin-bottom: 4px;
 }
 .plan-main.enterprise .plan-tier-name { color: rgba(255,255,255,0.85); }
 .plan-ideal {
@@ -75,7 +75,7 @@
 }
 .price-actual {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 46px; font-weight: 700; color: var(--blue-deep);
+  font-size: 46px; font-weight: 700; color: var(--teal-deep);
   line-height: 1; display: flex; align-items: flex-end; gap: 4px;
 }
 .price-actual .rupee { font-size: 32px; margin-bottom: 4px; }
@@ -83,7 +83,7 @@
 .plan-main.enterprise .price-actual { color: white; }
 .plan-main.enterprise .price-actual sub { color: rgba(255,255,255,0.5); }
 .price-save {
-  font-size: 11.5px; color: var(--blue-deep); font-weight: 700;
+  font-size: 11.5px; color: var(--teal-deep); font-weight: 700;
   margin-top: 4px; font-family: 'Space Grotesk', sans-serif;
 }
 .plan-main.enterprise .price-save { color: rgba(255,255,255,0.85); }
@@ -97,14 +97,18 @@
   display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
 }
 .plan-main.enterprise .plan-feats li { color: rgba(255,255,255,0.75); }
-.fi-yes { color: var(--blue-deep); font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.fi-yes { color: var(--teal-deep); font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 .fi-no { color: #CBD5E0; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 .fi-dim { color: var(--text-light) !important; }
 .plan-main.enterprise .fi-yes { color: rgba(255,255,255,0.85); }
 
-.plan-action { margin-top: auto; }
-.plan-action .btn-outline, .plan-action .btn-gold, .plan-action .btn-primary {
-  width: 100%; justify-content: center; padding: 13px 20px; font-size: 14px;
+.plan-action { margin-top: auto; padding-top: 4px; }
+.plan-action .btn-outline,
+.plan-action .btn-gold,
+.plan-action .btn-primary {
+  width: 100%; justify-content: center;
+  padding: 13px 20px; font-size: 14px;
+  text-align: center;
 }
 
 /* ── VALUE NOTES ── */
@@ -132,10 +136,10 @@ table.compare thead th {
   white-space: nowrap;
 }
 table.compare thead th:first-child { text-align: left; color: var(--text-mid); }
-table.compare thead th.popular-col { color: var(--blue-sky); background: var(--sky-pale); border-radius: 12px 12px 0 0; }
-table.compare thead th:not(:first-child) { min-width: 140px; color: var(--blue-deep); }
+table.compare thead th.popular-col { color: var(--teal-bright); background: var(--sky-pale); border-radius: 12px 12px 0 0; }
+table.compare thead th:not(:first-child) { min-width: 140px; color: var(--teal-deep); }
 table.compare tbody tr.cat-row td {
-  background: var(--sky); color: var(--blue-deep);
+  background: var(--sky); color: var(--teal-deep);
   font-size: 11px; font-weight: 700;
   text-transform: uppercase; letter-spacing: 1.5px;
   padding: 10px 16px;
@@ -147,13 +151,13 @@ table.compare tbody td {
   border-bottom: 1px solid var(--border-soft);
   text-align: center; vertical-align: middle;
 }
-table.compare tbody td:first-child { text-align: left; color: var(--blue-deep); font-weight: 500; }
-table.compare tbody td.popular-col { background: rgba(212,160,23,0.04); }
+table.compare tbody td:first-child { text-align: left; color: var(--teal-deep); font-weight: 500; }
+table.compare tbody td.popular-col { background: rgba(28,196,176,0.04); }
 table.compare tbody tr:last-child td { border: none; }
 table.compare tbody tr:hover td { background: var(--sky); }
-.c-yes { color: var(--blue-deep) !important; font-weight: 700; }
+.c-yes { color: var(--teal-deep) !important; font-weight: 700; }
 .c-no { color: #CBD5E0 !important; }
-.c-gold { color: var(--blue-sky) !important; font-weight: 700; }
+.c-gold { color: var(--amber) !important; font-weight: 700; }
 
 /* ── REFERRAL SECTION ── */
 .referral-section {}
@@ -186,13 +190,14 @@ table.compare tbody tr:hover td { background: var(--sky); }
 .ref-title { font-size: 18px; color: var(--blue-deep); margin-bottom: 10px; }
 .ref-desc { font-size: 13px; color: var(--text-mid); line-height: 1.7; margin-bottom: 18px; }
 .ref-earn {
-  background: var(--sky); border-radius: 14px; padding: 18px;
+  background: linear-gradient(135deg, #CCFBF1, #FDE68A);
+  border-radius: 14px; padding: 18px;
   margin-bottom: 14px;
 }
-.ref-earn strong { display: block; font-size: 42px; font-family: 'Cormorant Garamond', serif; color: var(--blue-deep); line-height: 1; }
+.ref-earn strong { display: block; font-size: 42px; font-family: 'Cormorant Garamond', serif; color: var(--teal-deep); line-height: 1; }
 .ref-earn span { font-size: 12px; color: var(--text-light); font-family: 'Space Grotesk', sans-serif; }
 .ref-example { font-size: 12.5px; color: var(--text-mid); }
-.ref-example strong { color: var(--blue-sky); }
+.ref-example strong { color: var(--teal-bright); }
 
 .ref-note {
   background: var(--sky); border: 1px solid var(--sky-mid);
@@ -200,7 +205,7 @@ table.compare tbody tr:hover td { background: var(--sky); }
   font-size: 12.5px; color: var(--text-mid); line-height: 1.7;
 }
 
-/* ── FAQ ── */
+/* FAQ */
 .faq-section { background: var(--cream); }
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .faq-item {
@@ -209,12 +214,12 @@ table.compare tbody tr:hover td { background: var(--sky); }
   cursor: pointer; transition: all 0.25s;
 }
 .faq-item:hover { border-color: var(--border-brand); box-shadow: var(--shadow-soft); }
-.faq-q { font-size: 15px; color: var(--blue-deep); margin-bottom: 10px; font-weight: 600; }
+.faq-q { font-size: 15px; color: var(--teal-deep); margin-bottom: 10px; font-weight: 600; }
 .faq-a { font-size: 13px; color: var(--text-mid); line-height: 1.75; }
 
-/* ── CTA SECTION ── */
+/* CTA SECTION */
 .cta-member {
-  background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
+  background: linear-gradient(135deg, #0A2B27, #0A5F55 60%, #7C3A00);
   border-radius: var(--radius-xl); padding: 60px 48px; text-align: center;
   position: relative; overflow: hidden;
 }
@@ -222,7 +227,7 @@ table.compare tbody tr:hover td { background: var(--sky); }
   content: '';
   position: absolute; top: -40%; right: -5%;
   width: 400px; height: 400px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,160,23,0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(245,158,11,0.18), transparent 70%);
 }
 
 @media (max-width: 1024px) { .plans-main-grid { grid-template-columns: 1fr 1fr; } }
@@ -265,7 +270,7 @@ table.compare tbody tr:hover td { background: var(--sky); }
 <!-- HERO -->
 <div class="page-hero" style="position:relative;z-index:10;">
   <div class="hero-badge reveal">💎 Annual Membership Plans</div>
-  <h1 class="reveal">Plans Designed for<br><span class="accent" style="background:linear-gradient(135deg,#1565C0,#7B1FA2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;;background:linear-gradient(135deg,#1565C0,#1976D2,#7B1FA2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Every Exporter</span></h1>
+  <h1 class="reveal">Plans Designed for<br><span class="accent" style="background:linear-gradient(135deg,#0A5F55,#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;;background:linear-gradient(135deg,#0A5F55,#0E7C6F,#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Every Exporter</span></h1>
   <p class="reveal">Whether you're exploring global trade for the first time or running a large trading house — we have a membership that precisely fits your scale, budget, and growth ambitions. All plans are billed annually.</p>
 </div>
 
@@ -387,7 +392,7 @@ table.compare tbody tr:hover td { background: var(--sky); }
         <li><span class="fi-yes">✓</span> 5× Team Virtual Business Cards</li>
       </ul>
       <div class="plan-action">
-        <a href="contact.html" class="btn-gold" style="background:linear-gradient(135deg,#42A5F5,var(--gold-bright));">Contact for Enterprise →</a>
+        <a href="contact.html" class="btn-gold">Contact for Enterprise →</a>
       </div>
     </div>
   </div>
@@ -399,7 +404,7 @@ table.compare tbody tr:hover td { background: var(--sky); }
   <!-- COMPARISON TABLE -->
   <div class="card-glass reveal" style="margin-bottom:48px;padding:40px;">
     <div class="section-label" style="margin-bottom:10px;">Full Comparison</div>
-    <h2 style="font-size:28px;color:#1565C0;margin-bottom:28px;">Detailed Feature Breakdown</h2>
+    <h2 style="font-size:28px;color:#0A5F55;margin-bottom:28px;">Detailed Feature Breakdown</h2>
     <div class="compare-wrap">
       <table class="compare">
         <thead>
@@ -448,10 +453,10 @@ table.compare tbody tr:hover td { background: var(--sky); }
           </tr>
           <tr>
             <td>You Save vs MRP</td>
-            <td style="color:#1565C0;font-weight:600;">₹4,000</td>
-            <td class="popular-col" style="color:#1565C0;font-weight:600;">₹12,000</td>
-            <td style="color:#1565C0;font-weight:600;">₹25,000</td>
-            <td style="color:#1565C0;font-weight:600;">₹45,000</td>
+            <td style="color:#0A5F55;font-weight:600;">₹4,000</td>
+            <td class="popular-col" style="color:#0A5F55;font-weight:600;">₹12,000</td>
+            <td style="color:#0A5F55;font-weight:600;">₹25,000</td>
+            <td style="color:#0A5F55;font-weight:600;">₹45,000</td>
           </tr>
         </tbody>
       </table>
@@ -459,11 +464,11 @@ table.compare tbody tr:hover td { background: var(--sky); }
   </div>
 
   <!-- REFERRAL PROGRAMME -->
-  <div class="card-glass reveal" style="background:#F8F9FE;border-color:rgba(21,101,192,0.32);">
+  <div class="card-glass reveal" style="background:#F8F9FE;border-color:rgba(10,95,85,0.32);">
     <div style="text-align:center;margin-bottom:40px;">
       <div class="section-label">Referral Programme</div>
-      <h2 style="font-size:32px;color:#1565C0;margin-bottom:10px;">Earn While You Grow — 3-Level Referral</h2>
-      <p style="font-size:15px;color:#4A6080;max-width:620px;margin:0 auto;line-height:1.8;">Every BuyGenix member can refer other businesses and earn commission up to 3 levels deep. The more your network grows, the more you earn — passively.</p>
+      <h2 style="font-size:32px;color:#0A5F55;margin-bottom:10px;">Earn While You Grow — 3-Level Referral</h2>
+      <p style="font-size:15px;color:#3D6B65;max-width:620px;margin:0 auto;line-height:1.8;">Every BuyGenix member can refer other businesses and earn commission up to 3 levels deep. The more your network grows, the more you earn — passively.</p>
     </div>
     <div class="referral-grid">
       <div class="ref-card l1 reveal tilt-card">
@@ -501,7 +506,7 @@ table.compare tbody tr:hover td { background: var(--sky); }
       </div>
     </div>
     <div class="ref-note">
-      💳 Commission paid monthly via bank transfer or UPI · Minimum payout ₹500 · Active membership required to participate · Full programme rules in <a href="terms.html" style="color:#42A5F5;">Terms &amp; Conditions</a>
+      💳 Commission paid monthly via bank transfer or UPI · Minimum payout ₹500 · Active membership required to participate · Full programme rules in <a href="terms.html" style="color:#1CC4B0;">Terms &amp; Conditions</a>
     </div>
   </div>
 
@@ -509,7 +514,7 @@ table.compare tbody tr:hover td { background: var(--sky); }
   <div style="margin-top:48px;">
     <div style="text-align:center;margin-bottom:36px;" class="reveal">
       <div class="section-label">Common Questions</div>
-      <h2 style="font-size:32px;color:#1565C0;margin-top:10px;">Frequently Asked Questions</h2>
+      <h2 style="font-size:32px;color:#0A5F55;margin-top:10px;">Frequently Asked Questions</h2>
     </div>
     <div class="faq-grid">
       <div class="faq-item reveal">
