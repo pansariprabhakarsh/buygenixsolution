@@ -838,6 +838,32 @@ function submitTk(){document.getElementById('tk-ok').style.display='block';setTi
 
 /* ─ COPY REF ─ */
 function copyRef(){const l=document.getElementById('ref-link-txt').textContent;navigator.clipboard?.writeText(l).then(()=>alert('✅ Referral link copied!')).catch(()=>alert('Link: '+l))}
+
+/* ─ SESSION PICKUP — reads login.html sessionStorage ─ */
+document.addEventListener('DOMContentLoaded', function() {
+  const storedId = sessionStorage.getItem('bgx_client_id');
+  if (storedId) {
+    const c = BGX.getClient(storedId);
+    if (c) {
+      CLIENT = c;
+      document.getElementById('lp').style.display = 'none';
+      document.getElementById('portal').style.display = 'block';
+      initPortal();
+      return;
+    }
+  }
+  /* No valid session — show inline login form as fallback */
+  document.getElementById('lp').style.display = 'flex';
+});
+
+/* ─ OVERRIDE LOGOUT — redirect to login.html ─ */
+function doLogout() {
+  sessionStorage.removeItem('bgx_client_id');
+  sessionStorage.removeItem('bgx_client_name');
+  sessionStorage.removeItem('bgx_client_email');
+  CLIENT = null;
+  window.location.href = 'login.html';
+}
 </script>
 </body>
 </html>
